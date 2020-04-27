@@ -27,9 +27,6 @@ resource "kubernetes_persistent_volume_claim" "talant-pvc" {
       }
     }
   storage_class_name = kubernetes_storage_class.talant-storage-class.metadata.0.name
+    }
   }
 
-  tags = {
-    Name = "new-volume"
-  }
-}
